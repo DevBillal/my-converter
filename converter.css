@@ -1,0 +1,223 @@
+*{margin: 0;padding: 0;}
+
+
+/*body*/
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: url(converter_img/preview.gif);
+    background-size: cover;
+    background-attachment: fixed;
+}
+/*body*/
+
+/*menu icon design*/
+.menucontainer {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/*navigation bar css*/
+.navbar-brand{
+    margin-right: 200px;
+}
+/*nav logo Responsivess*/
+
+@media(min-width:250px) and (max-width:500px){
+    .navbar-brand {
+        margin-right: 0px;
+    }
+} 
+@media(min-width:501px) and (max-width:750px){
+    .navbar-brand {
+        margin-right: 10px;
+    }
+}
+/*Responsivess*/
+.nav-item,a{
+    color: #919191;
+    padding-right: 30px;
+}
+nav{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px -3px 9px 2px #000;
+}
+/*navigation bar css*/
+
+
+
+/******main image and heading css*/
+
+#header h1{
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    display: inline;
+    padding: 1%;
+    font-size: 2em;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    width: 50%;
+    position: absolute;
+    top: 42%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+}
+
+#header{
+    width: 100%;
+    height: 600px;
+    box-shadow: 0px -3px 14px 2px #000;
+    background-size: 100% 100%;
+    position: relative;
+    background-image: url("converter_img/abstract_x68e.png");
+    background-repeat: no-repeat;
+}
+/*Header image responsivness */
+/*Header image responsivness */
+@media(min-width:200px) and (max-width:349px){
+  #header {
+    height: 150px;
+  }
+}
+
+@media(min-width:350px) and (max-width:500px){
+  #header {
+    height: 250px;
+  }
+}
+
+@media(min-width:501px) and (max-width:900px){
+  #header {
+    height: 400px;
+  }
+}
+
+@media(min-width:901px) and (max-width:1200px){
+  #header {
+    height: 500px;
+  }
+}
+
+@media(min-width:1201px) and (max-width:1370px){
+  #header {
+    height: 600px;
+  }
+}
+
+@media(min-width:1371px) and (max-width:1700px){
+  #header {
+    height: 800px;
+  }
+}
+
+@media(min-width:1701px) and (max-width:2500px){
+  #header {
+    height: 1000px;
+  }
+}
+
+@media(min-width:2501px) and (max-width:2590px){
+  #header {
+    height: 1100px;
+  }
+}
+/*Header image responsivness */
+
+/******main image and heading css*/
+
+
+
+/*input box css*/
+.inputsize{
+    border: 2px solid #6cf3e6;
+    width: 767px;
+    margin-bottom:10px; 
+    display: inline;
+}
+/*input box css*/
+
+
+
+/*Divition headlines name*/
+#divition_headlines_name{
+    text-align: center;
+    font-size: 43px;
+    color: #8445ff;
+    background-color: #fff;
+    box-shadow: 185px -3px 15px -4px #05536b;
+    text-transform: uppercase;
+}
+/*Divition headlines name*/
+
+
+/*card css*/
+.card-deck{
+    margin: 20px;
+    display: grid;
+    grid-gap:20px;
+    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: 1fr;
+}
+.card{
+    margin: 0 auto;
+    border: 1px solid #a5a5a5;
+    padding: 10px;
+    background-color: rgb(239 239 239 / 77%);
+    color: #000;
+    text-align: center;
+    transition: .3s all cubic-bezier(0.43, 0.89, 0, 1.35);
+}
+.card:hover{
+  background-color: #ffffff;
+    cursor:pointer;
+    border: 2px solid #8f56ffc9;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    transform: scale(1.1);
+}   
+ 
+/*Card responsiveness of mobile*/
+/*
+@media(min-width:200px) and (max-width:349px){
+  .card {
+    height: 150px;
+  }
+}
+
+@media(min-width:350px) and (max-width:500px){
+  .card {
+    height: 250px;
+  }
+}
+*/
+/*Card responsiveness of mobile*/
+/*card css*/
+
+
+
+/*convertedResult*/
+#convertedResult{
+    
+}
+/*convertedResult*/

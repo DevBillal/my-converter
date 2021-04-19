@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>My Converter</title>
+    <link href="converter_img/currency.png" rel="icon" type="image/png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="converter.css"/>
+</head>
+<body data-spy="scroll" data-target="#nav-scroll" data-offset="90"> 
+<div id="top"></div>
+
+
+<!--navigation bar-->
+
+<nav class="navbar navbar-expand-xl sticky-top">
+<a href="#top" class="navbar-brand">
+    <img src="converter_img/currency.png" alt="logo" style="width: 50px"/>MY CONVERTER
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+    <div class="menucontainer" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+</button>
+               
+<div id="ul-margin" class="container">
+<div class="collapse navbar-collapse" id="navbar-collapse">
+    <ul id="nav-scroll"  class="navbar-nav lead">
+        <li class="nav-item"><a href="#tempearature" class="nav-link">TEMPERATURE</a></li>
+        <li class="nav-item"><a href="#length" class="nav-link">LENGTH</a></li>
+        <li class="nav-item"><a href="#money" class="nav-link">MONEY</a></li>
+        <li class="nav-item"><a href="#area" class="nav-link">AREA</a></li>
+        <li class="nav-item"><a href="#volume" class="nav-link">VOLUME</a></li>
+        <li class="nav-item"><a href="#weight" class="nav-link">WEIGHT</a></li>
+        <li class="nav-item"><a href="#time" class="nav-link">TIME</a></li>
+    </ul>          
+</div>
+</div>
+
+</nav>
+<!--navigation bar-->
+
+
+
+<!--main image and heading-->
+
+<div id="header">
+    <h1>convert anything that you need</h1> 
+</div>
+
+<!--main image and heading-->
+
+
+
+
+
+<!--temperature-->
+<div class="tempearature">    
+<div id="tempearature"></div>
+<div id="divition_headlines_name">Convert tempearature here</div>
+<div class="card-deck"> 
+    
+     <!--   Celsius  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Celsius</h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">Celsius</span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="convertCelsius(this.value)" onchange="convertCelsius(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#Celsius_temperature_collapse">&darr;</button>
+        <div id="Celsius_temperature_collapse" class="collapse">
+            <strong>
+            Kelvin<div id="CelsiusToKelvin" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Fahrenheit<div id="CelsiusToFahrenheit" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    
+    
+    <!--   Fahrenheit  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Fahrenheit</h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">Fahrenheit</span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="convertFahrenheit(this.value)" onchange="convertFahrenheit(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#Fahrenheit_temperature_collapse">&darr;</button>
+        <div id="Fahrenheit_temperature_collapse" class="collapse">
+            <strong>
+            Celsius<div id="FahrenheitToCelsius" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Kelvin<div id="FahrenheitToKelvin" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    
+       <!--   Kelvin  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Kelvin</h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">Kelvin</span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="convertKelvin(this.value)" onchange="convertKelvin(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#Kelvin_temperature_collapse">&darr;</button>
+        <div id="Kelvin_temperature_collapse" class="collapse">
+            <strong>
+            Celsius<div id="KelvinToCelsius" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Fahrenheit<div id="KelvinToFahrenheit" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+        
+    
+</div>    
+</div> 
+<!--/temperature-->
+
+
+
+
+  
+  
+<!--length-->
+<div class="length">
+<div id="length"></div>
+<div id="divition_headlines_name">Convert length here</div>
+<div class="card-deck"> 
+    
+         <!--   Meter  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Meter</h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">Meter</span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#Meter_length_collapse">&darr;</button>
+        <div id="Meter_length_collapse" class="collapse">
+            <strong>
+            Kilometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Centemeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Milimeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Micrometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Nanometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Mile<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Yard<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Foot<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Inch<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Light Year<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>    
+        
+        
+        
+         <!--   Kilometer  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Kilometer</h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">Kilometer</span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#Kilometer_length_collapse">&darr;</button>
+        <div id="Kilometer_length_collapse" class="collapse">
+            <strong>
+            Meter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Centemeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Milimeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Micrometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Nanometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Mile<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Yard<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Foot<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Inch<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Light Year<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+        
+        
+         <!--   centemeter  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Centemeter</h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">centemeter</span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#centemeter_length_collapse">&darr;</button>
+        <div id="centemeter_length_collapse" class="collapse">
+            <strong>
+            Meter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Kilometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Milimeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Micrometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Nanometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Mile<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Yard<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Foot<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Inch<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Light Year<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+        
+        
+         <!--   milimeter  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Milimeter</h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">Milimeter</span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#Milimeter_length_collapse">&darr;</button>
+        <div id="Milimeter_length_collapse" class="collapse">
+            <strong>
+            Meter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Kilometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Centemeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Micrometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Nanometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Mile<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Yard<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Foot<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Inch<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Light Year<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+            
+            
+         <!--   micrometer  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Micrometer</h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">Micrometer</span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#Micrometer_length_collapse">&darr;</button>
+        <div id="Micrometer_length_collapse" class="collapse">
+            <strong>
+            Meter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Kilometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Centemeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Milimeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Nanometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Mile<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Yard<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Foot<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Inch<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Light Year<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+            
+            
+         <!--   nanometer  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Nanometer</h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">Nanometer</span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#Nanometer_length_collapse">&darr;</button>
+        <div id="Nanometer_length_collapse" class="collapse">
+            <strong>
+            Meter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Kilometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Centemeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Milimeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Micrometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Mile<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Yard<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Foot<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Inch<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Light Year<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+            
+            
+         <!--   mile  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Mile</h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">Mile</span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#Mile_length_collapse">&darr;</button>
+        <div id="Mile_length_collapse" class="collapse">
+            <strong>
+            Meter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Kilometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Centemeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Milimeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Micrometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Nanometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Yard<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Foot<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Inch<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Light Year<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+            
+            
+         <!--   yard  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Yard</h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">Yard</span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#Yard_length_collapse">&darr;</button>
+        <div id="Yard_length_collapse" class="collapse">
+            <strong>
+            Meter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Kilometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Centemeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Milimeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Micrometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Nanometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Mile<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Foot<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Inch<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Light Year<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+            
+            
+         <!--   foot  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Foot</h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">Foot</span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#Foot_length_collapse">&darr;</button>
+        <div id="Foot_length_collapse" class="collapse">
+            <strong>
+            Meter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Kilometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Centemeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Milimeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Micrometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Nanometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Mile<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Yard<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Inch<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Light Year<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+            
+         <!--   Inch  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Inch</h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">Inch</span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#Inch_length_collapse">&darr;</button>
+        <div id="Inch_length_collapse" class="collapse">
+            <strong>
+            Meter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Kilometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Centemeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Milimeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Micrometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Nanometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Mile<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Yard<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Foot<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Light Year<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+            
+         <!--   Light Year  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Light Year</h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">Light Year</span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#Light_Year_length_collapse">&darr;</button>
+        <div id="Light_Year_length_collapse" class="collapse">
+            <strong>
+            Meter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Kilometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Centemeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Milimeter<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Micrometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Nanometer<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Mile<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Yard<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Foot<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Inch<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+
+
+</div>
+</div>
+<!--/length-->
+
+
+
+
+<!--money-->
+<div class="money" style="margin-top: 70px;">
+<div id="money"></div>
+<div id="divition_headlines_name">Convert your money here</div>
+<div class="card-deck">
+          <!--   America-->
+    <div class="card">
+    <div class="card-body">
+        <h2 class="card-title">American Dollar</h2><hr>
+    <div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text">Dollar</span>
+    </div>
+        <input type="number" class="form-control inputsize"  oninput="convertAmericanDollar(this.value)" onchange="convertAmericanDollar(this.value)">
+    </div>
+       <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#u.s.a_money_collapse">&darr;</button>
+        <div id="u.s.a_money_collapse" class="collapse">
+        <strong>
+        Bangladeshi (Taka)<div id="dollarToBangladeshiTaka" class="alert alert-info"></div>
+        </strong>
+        <strong>
+        India (Rupee)<div id="dollarToIndianRupee" class="alert alert-info"></div>
+        </strong>
+        <strong>
+        Pakistan (Rupee)<div id="dollarToPakistaniRupee" class="alert alert-info"></div>
+        </strong>
+        <strong>
+        England (Pound)<div id="dollarToEnglandPound" class="alert alert-info"></div>
+        </strong>
+        <strong>
+        China (Yuan)<div id="dollarToChineseYuan" class="alert alert-info"></div>
+        </strong>
+        <strong>
+        Kuwait (Dinar)<div id="dollarToKuwaitiDinar" class="alert alert-info"></div>
+        </strong>
+        <strong>
+        Australia (Dollar)<div id="dollarToAustralianDollar" class="alert alert-info"></div>
+        </strong>
+        <strong>
+        Saudi-Arab (Riyal)<div id="dollarToSaudiRiyal" class="alert alert-info"></div>
+        </strong>
+        <strong>
+        U.A.E (Dirham)<div id="dollarToEmiretsDirham" class="alert alert-info"></div>
+        </strong>
+        <strong>
+        Qatar (Rial)<div id="dollarToQatariRial" class="alert alert-info"></div>
+        </strong>
+        <strong>
+        Oman (Rial)<div id="dollarToOmaniRial" class="alert alert-info"></div>
+        </strong>
+        <strong>
+        Maldives (Rufiyaa)<div id="dollarToMaldivianRufiyaa" class="alert alert-info"></div>
+        </strong>
+        </div>
+        </div>
+    </div>
+    </div>
+        
+         <!--    Bangladesh-->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Bangladeshi Taka</h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">Taka</span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="convertBangladeshiTaka(this.value)" onchange="convertBangladeshiTaka(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#Bangladesh_money_collapse">&darr;</button>
+        <div id="Bangladesh_money_collapse" class="collapse">
+            <strong>
+            America (Dollar)<div id="takaToAmericanDollar" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            India (Rupee)<div id="takaToIndianRupee" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Pakistan (Rupee)<div id="takaToPakistaniRupee" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            England (Pound)<div id="takaToEnglandPound" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            China (Yuan)<div id="takaToChineseYuan" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Kuwait (Dinar)<div id="takaToKuwaitiDinar" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Australia (Dollar)<div id="takaToAustralianDollar" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Saudi-Arab (Riyal)<div id="takaToSaudiRiyal" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            U.A.E (Dirham)<div id="takaToEmiretsDirham" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Qatar (Rial)<div id="takaToQatariRial" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Oman (Rial)<div id="takaToOmaniRial" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Maldives (Rufiyaa)<div id="takaToMaldivianRufiyaa" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+         <!--    India-->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Indian Rupee</h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">Rupee</span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="convertIndianRupee(this.value)" onchange="convertIndianRupee(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#India_money_collapse">&darr;</button>
+        <div id="India_money_collapse" class="collapse">
+            <strong>
+            America (Dollar)<div id="IndianRupeeToAmericanDollar" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Bangladesh (Taka)<div id="IndianRupeeToBangladeshiTaka" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Pakistan (Rupee)<div id="IndianRupeeToPakistaniRupee" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            England (Pound)<div id="IndianRupeeToEnglandPound" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            China (Yuan)<div id="IndianRupeeToChineseYuan" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Kuwait (Dinar)<div id="IndianRupeeToKuwaitiDinar" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Australia (Dollar)<div id="IndianRupeeToAustralianDollar" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Saudi-Arab (Riyal)<div id="IndianRupeeToSaudiRiyal" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            U.A.E (Dirham)<div id="IndianRupeeToEmiretsDirham" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Qatar (Rial)<div id="IndianRupeeToQatariRial" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Oman (Rial)<div id="IndianRupeeToOmaniRial" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Maldives (Rufiyaa)<div id="IndianRupeeToMaldivianRufiyaa" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+            
+          <!--Pakistan-->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Pakistani Rupee</h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text">Rupee</span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="convertPakistaniRupee(this.value)" onchange="convertPakistaniRupee(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#Pakistan_money_collapse">&darr;</button>
+        <div id="Pakistan_money_collapse" class="collapse">
+            <strong>
+            America (Dollar)<div id="PakistaniRupeeToAmericanDollar" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Bangladesh (Taka)<div id="PakistaniRupeeToBangladeshiTaka" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            India (Rupee)<div id="PakistaniRupeeToIndianRupee" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            England (Pound)<div id="PakistaniRupeeToEnglandPound" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            China (Yuan)<div id="PakistaniRupeetoChineseYuan" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Kuwait (Dinar)<div id="PakistaniRupeetoKuwaitiDinar" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Australia (Dollar)<div id="PakistaniRupeetoAustralianDollar" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Saudi-Arab (Riyal)<div id="PakistaniRupeetoSaudiRiyal" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            U.A.E (Dirham)<div id="PakistaniRupeetoEmiretsDirham" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Qatar (Rial)<div id="PakistaniRupeetoQatariRial" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Oman (Rial)<div id="PakistaniRupeetoOmaniRial" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            Maldives (Rufiyaa)<div id="PakistaniRupeetoMaldivianRufiyaa" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    
+    
+    
+</div>
+</div>
+<!--/money-->
+  
+  
+  
+  
+  
+<!--area-->
+<div class="area">
+<div id="area"></div>
+<div id="divition_headlines_name">Convert area here</div>   
+<div class="card-deck"> 
+   
+   
+    <!--   area  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title"></h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"></span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#area_collapse">&darr;</button>
+        <div id="area_collapse" class="collapse">
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div> 
+    
+    
+    
+    <!--   area  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title"></h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"></span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#area_collapse">&darr;</button>
+        <div id="area_collapse" class="collapse">
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+     
+     
+    <!--   area  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title"></h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"></span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#area_collapse">&darr;</button>
+        <div id="area_collapse" class="collapse">
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+     
+     
+    <!--   area  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title"></h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"></span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#area_collapse">&darr;</button>
+        <div id="area_collapse" class="collapse">
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+      
+</div>       
+<!--</div> -->
+<!--/area-->
+
+
+
+
+
+<!--volume-->
+<div class="volume">
+<div id="volume"></div>
+<div id="divition_headlines_name">Convert tempearature here</div>  
+<div class="card-deck">
+   
+     
+    
+    <!--   volume  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title"></h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"></span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#volume_collapse">&darr;</button>
+        <div id="volume_collapse" class="collapse">
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div> 
+    
+      
+      
+    <!--   volume  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title"></h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"></span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#volume_collapse">&darr;</button>
+        <div id="volume_collapse" class="collapse">
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+      
+      
+      
+    <!--   volume  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title"></h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"></span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#volume_collapse">&darr;</button>
+        <div id="volume_collapse" class="collapse">
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    
+    <!--   volume  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title"></h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"></span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#volume_collapse">&darr;</button>
+        <div id="volume_collapse" class="collapse">
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+</div>    
+</div> 
+<!--/volume-->
+
+
+
+
+
+<!--weight-->
+<div class="weight">
+<div id="weight"></div>
+<div id="divition_headlines_name">Convert weight here</div>   
+<div class="card-deck"> 
+   
+   
+    
+    <!--   weight  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title"></h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"></span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#weight_collapse">&darr;</button>
+        <div id="weight_collapse" class="collapse">
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div> 
+    
+    
+    <!--   weight  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title"></h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"></span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#weight_collapse">&darr;</button>
+        <div id="weight_collapse" class="collapse">
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div> 
+    
+    
+    <!--   weight  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title"></h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"></span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#weight_collapse">&darr;</button>
+        <div id="weight_collapse" class="collapse">
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div> 
+    
+    
+    <!--   weight  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title"></h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"></span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#weight_collapse">&darr;</button>
+        <div id="weight_collapse" class="collapse">
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div> 
+    
+      
+</div>    
+</div> 
+<!--/weight-->
+
+
+
+
+
+<!--time-->
+<div class="time"> 
+<div id="time"></div>
+<div id="divition_headlines_name">Convert time here</div>
+<div class="card-deck"> 
+   
+   
+    <!--   time  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title"></h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"></span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#time_collapse">&darr;</button>
+        <div id="time_collapse" class="collapse">
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div> 
+      
+     <!--   time  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title"></h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"></span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#time_collapse">&darr;</button>
+        <div id="time_collapse" class="collapse">
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div> 
+      
+        
+     <!--   time  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title"></h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"></span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#time_collapse">&darr;</button>
+        <div id="time_collapse" class="collapse">
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div> 
+      
+        
+      <!--   time  -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title"></h2><hr>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"></span>
+            </div>
+        <input type="number" class="form-control inputsize"  oninput="(this.value)" onchange="(this.value)">
+        </div>
+        <div id="convertedResult">
+        <button type="button" class="btn btn-block btn-outline-info my-2 " data-toggle="collapse" data-target="#time_collapse">&darr;</button>
+        <div id="time_collapse" class="collapse">
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            <strong>
+            x<div id="" class="alert alert-info"></div>
+            </strong>
+            </div>
+        </div>
+        </div>
+    </div> 
+      
+      
+      
+</div>    
+</div>
+<!--/time-->
+
+
+
+<br>
+
+
+<!--footer-->
+<footer>
+    
+</footer>
+<!--/footer-->
+	
+
+
+<!--javascript file-->
+<script src="converter.js"></script>
+
+<!-- JavaScript LINK -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- JavaScript LINK --> 
+<script>
+    function myFunction(x) {
+      x.classList.toggle("change");
+    }
+</script>
+<!---[JavaScript] for  smooth scrolling when clicking on navigation---> 
+	<script>
+		$(function() {
+		  var topoffset = 90; //variable for menu height
+
+		  //Use smooth scrolling when clicking on navigation
+		  $('.nav-item a').click(function() {
+			if (location.pathname.replace(/^\//,'') === 
+			  this.pathname.replace(/^\//,'') && 
+			  location.hostname === this.hostname) {
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			  if (target.length) {
+				$('html,body').animate({
+				  scrollTop: target.offset().top-topoffset
+				}, 500);
+				return false;
+			  } //target.length
+			} //click function
+		  }); //smooth scrolling
+		});		
+	</script>
+<!---[JavaScript] for  smooth scrolling when clicking on navigation---> 
+</body>
+</html>
+
+
+
